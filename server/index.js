@@ -12,13 +12,13 @@ app.use(cors());
 app.use(express.json());
 
 //Importing userRoutes
-
+const userRoutes = require("./routes/userRoute");
 // Importing answerRoute
 
 //Importing questionRoutes
 
 // user route middleware
-
+app.use("/api/users", userRoutes);
 // Question route middleware
 
 // Answers Route middleware
