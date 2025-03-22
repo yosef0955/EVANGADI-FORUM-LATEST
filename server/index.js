@@ -14,6 +14,7 @@ app.use(express.json());
 //Importing userRoutes
 const userRoutes = require("./routes/userRoute");
 // Importing answerRoute
+const answerRoute = require("./routes/answerRoute");
 
 //Importing questionRoutes
 const questionRoute = require("./routes/questionRoute");
@@ -22,6 +23,7 @@ app.use("/api/users", userRoutes);
 // Question route middleware 
 app.use("/api/question", questionRoute);
 // Answers Route middleware
+app.use("/api/answers", answerRoute);
 app.get("/", (req, res) => {
   res.status(StatusCodes.OK).json({ msg: "It is working" });
 });
