@@ -47,5 +47,10 @@ async function login(req, res) {
 }
 
 // Check user Controller
+async function checkUser(req, res) {
+  const username = req.user.username;
+  const userid = req.user.userid;
 
-module.exports = { login };
+  res.status(StatusCodes.OK).json({ msg: "Valid User", username, userid });
+}
+module.exports = { login, checkUser };
