@@ -93,4 +93,40 @@ async function postQuestion(req, res) {
   }
 }
 
-module.exports = { allQuestions, postQuestion };
+async function singleQuestion(req, res) {
+  // res.status(StatusCodes.OK).json({ msg: "Single Question Displayed" });
+  const { question_id } = req.params;
+  try {
+    const [question] = await db.query(
+      "SELECT * FROM questions WHERE question_id=?",
+      [question_id]
+    );
+    if (question.length == 0) {
+      return res
+        .status(StatusCodes.NOT_FOUND)
+        .json({ msg: "The requested question could not be Found" });
+    }
+    const questionId = question[0].id;
+    const title = question[0].title;
+    const content = question[0].description;
+    const userId = question[0].user_id;
+    const createdAt = question[0].created_at;
+
+    return res.status(StatusCodes.OK).json({
+      question: {
+        question_id: questionId,
+        title: title,
+        content: content,
+        user_id: userId,
+        created_at: createdAt,
+      },
+    });
+  } catch (error) {
+    console.log(error.message);
+    res
+      .status(StatusCodes.INTERNAL_SERVER_ERROR)
+      .json({ msg: "An Expected Error Occurred" });
+  }
+}
+
+module.exports = { allQuestions, postQuestion, singleQuestion };
