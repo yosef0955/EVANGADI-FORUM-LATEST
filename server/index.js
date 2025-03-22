@@ -19,7 +19,7 @@ const userRoutes = require("./routes/userRoute");
 const questionRoute = require("./routes/questionRoute");
 // user route middleware
 app.use("/api/users", userRoutes);
-// Question route middleware
+// Question route middleware 
 app.use("/api/question", questionRoute);
 // Answers Route middleware
 app.get("/", (req, res) => {
