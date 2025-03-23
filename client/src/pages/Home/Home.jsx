@@ -9,6 +9,8 @@ import { IoMdPerson } from "react-icons/io";
 import styles from "./home.module.css"; 
 import axios from "../../Api/axios";
 import { AppState } from "../../App";
+import ScaleLoader from "react-spinners/ScaleLoader";
+
 
 const Home = () => {
   const [searchQuery, setSearchQuery] = useState("");
@@ -131,7 +133,11 @@ const Home = () => {
 
       <div className={styles.listGroup}>
         {loading ? (
-          <p className={styles.loadingText}>Loading...</p>
+          
+<p className={styles.loadingText}>
+            <ScaleLoader />
+</p>
+
         ) : currentQuestions.length > 0 ? (
           currentQuestions.map((q) => {
             return (
@@ -143,7 +149,7 @@ const Home = () => {
                 {/* Profile Image & Username */}
                 <div className={styles.profileSection}>
                   <IoPersonCircleOutline size={80} />
-                  <div className={styles.username}>{q.username}</div>
+                  <div className={styles.username}>{q.user_name}</div>
                 </div>
 
                 {/* Question Text */}

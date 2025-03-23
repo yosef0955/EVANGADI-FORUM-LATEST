@@ -1,6 +1,6 @@
 import React from "react";
 import style from "./footer.module.css";
-import logo from "../../assets/evangadi-logo-footer.png";
+import logo from "../../assets/evangadiWhiteLogo.png";
 import { FaFacebookF } from "react-icons/fa";
 import { TiSocialInstagram } from "react-icons/ti";
 import { Link } from "react-router-dom";

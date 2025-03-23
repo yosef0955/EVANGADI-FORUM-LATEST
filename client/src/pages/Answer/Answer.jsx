@@ -155,7 +155,9 @@ const getAnswer = () => {
             <div key={singleAnswer.answer_id} className={styles.singleAnswer}>
               <div className={styles.avatar}>
                 <IoPersonCircleOutline size={55} />
-                <p> {singleAnswer.user_name}</p>
+                <p>
+{singleAnswer.user_name}
+                </p>
               </div>
               <div className={styles.answerWrapper}>
                 <div className={styles.answerContentMeta}>
