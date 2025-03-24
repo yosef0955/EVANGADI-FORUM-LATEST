@@ -1,11 +1,14 @@
-import React, { useState, useRef, useEffect } from "react";
+import React, { useState, useRef, useEffect ,useContext} from "react";
 import axios from "../../Api/axios";
 import { useNavigate, Link } from "react-router-dom";
 import css from "./signUp.module.css";
 import { FaEye, FaEyeSlash } from "react-icons/fa";
 import { ClipLoader } from "react-spinners";
+import { AppState } from "../../App";
+
 
 const SignUp = ({ toggleAuth }) => {
+  const { user, setUser } = useContext(AppState);
   const [formData, setFormData] = useState({
     username: "",
     firstname: "",
@@ -112,6 +115,7 @@ const SignUp = ({ toggleAuth }) => {
         });
         console.log(data.token);
         localStorage.setItem("token", data.token);
+        setUser(data)
         setTimeout(() => {
           navigate("/home");
         }, 2000);
