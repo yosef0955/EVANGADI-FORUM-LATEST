@@ -7,6 +7,7 @@ export const AppState = createContext();
 function App() {
   const [user, setUser] = useState({});
   const token = localStorage.getItem("token");
+  const userOnStorage = localStorage.getItem("user");
 
   async function checkUser() {
     try {
@@ -15,12 +16,11 @@ function App() {
           Authorization: `Bearer ${token}`,
         },
       });
-   
+
       setUser(data);
 
       localStorage.setItem("user", JSON.stringify(data));
     } catch (error) {
-  
       localStorage.removeItem("user");
       setUser({});
     }
@@ -28,7 +28,7 @@ function App() {
 
   useEffect(() => {
     checkUser();
-  }, [user]);
+  }, [token, userOnStorage]);
 
   return (
     <AppState.Provider value={{ user, setUser }}>

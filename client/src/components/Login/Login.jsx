@@ -1,10 +1,12 @@
-import { useRef, useState } from "react";
+import { useRef, useState, useContext } from "react";
 import { Link, useNavigate } from "react-router-dom";
 import axios from "../../Api/axios";
 import styles from "./login.module.css";
 import { BiSolidHide, BiShow } from "react-icons/bi";
+import { AppState } from "../../App";
 
 function LogIn({ toggleAuth }) {
+  const { user, setUser } = useContext(AppState);
   const navigate = useNavigate();
   const emailDom = useRef();
   const passwordDom = useRef();
@@ -28,7 +30,7 @@ function LogIn({ toggleAuth }) {
       });
       // console.log(data.token);
       localStorage.setItem("token", data.token);
-
+      setUser(data);
       navigate("/home");
     } catch (error) {
       alert(error?.response?.data?.msg);
