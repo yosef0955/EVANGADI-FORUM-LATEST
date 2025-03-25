@@ -33,13 +33,13 @@
   text-align: left;
 }
 .about_section .button {
-  width: 17vw;
+  min-width: 17vw;
   color: white;
   font-size: 15px;
   font-weight: 400;
   background-color: #fe8402;
   padding: 12px 30px;
-  border-radius: 2px;
+  border-radius: 50px;
   cursor: pointer;
   border: none;
 }

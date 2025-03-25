@@ -19,7 +19,7 @@ h2 {
 .line {
   width: 27%;
   height: 3px;
-  background: #fe6613;
+  background: var(--secondary-color);
   border-radius: 2px;
   margin-bottom: 1.5rem;
 }
@@ -75,21 +75,20 @@ textarea {
 }
 
 button {
-  width: 200px;
+  width: 100%;
   padding: 12px;
   font-size: 1rem;
   font-weight: bold;
   color: #fff;
-  background: var(--old-button-color);
-  
+  background: var(--secondary-color);
   border: none;
-  border-radius: 8px;
+  border-radius: 50px;
   cursor: pointer;
   transition: background 0.3s ease-in-out;
 }
 
 button:hover {
-  background: var(--old-button-hover-color);
+  background: var(--shade-color);
 }
 
 @media (max-width: 768px) {

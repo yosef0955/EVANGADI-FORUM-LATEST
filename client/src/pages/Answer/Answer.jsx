@@ -143,7 +143,7 @@ const getAnswer = () => {
       <div className={styles.questionSection}>
         <h1 className={styles.questionHeading}>QUESTION</h1>
         <h3 className={styles.questionTitle}>
-          <FaCircleArrowRight size={17} color={"#0b5ed7"} /> {question.title}
+          <FaCircleArrowRight size={17}/> {question.title}
         </h3>
         <div className={styles.line}></div>
         <h4 className={styles.questionDescription}>{question.content}</h4>

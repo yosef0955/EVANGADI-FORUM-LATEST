@@ -1,6 +1,9 @@
 .header_logo img {
   width: 15vw;
 }
+.header_logo img:hover {
+  opacity: 0.8;
+}
 
 .header {
   width: 100%;
@@ -43,13 +46,16 @@
 }
 
 .header_right ul li a {
-  font-size: 19px;
+  font-size: 17px;
   color: black;
   text-decoration: none;
   padding: 10px 0px;
   margin-right: 2rem;
   transition: all 0.3s ease;
   border-radius: 5px;
+}
+.header_right ul li a:hover {
+  color: var(--secondary-color);
 }
 
 /* Button Styling */
@@ -135,9 +141,11 @@
   }
 
   .header_right ul li {
+    border-bottom: 1px solid rgb(180, 180, 180);
     width: 100%;
     margin: 10px 0;
   }
+
 
   .header_right ul li a {
     display: block;
@@ -151,17 +159,20 @@
   .header_logo img {
     width: 200px;
   }
+  .join {
+    margin-top: 30px;
+  }
 }
 /* Button Styling */
 .button,
 .join {
-  background-color: #0079fa;
+  background-color: var(--secondary-color);
   color: white;
   padding: 12px 30px;
   text-align: center;
   font-size: 13px;
   cursor: pointer;
-  border-radius: 5px;
+  border-radius: 50px;
   font-weight: bold;
   transition: all 0.3s ease;
   text-decoration: none;
@@ -170,10 +181,10 @@
 .button:hover,
 .join:hover {
   background: #fff;
-  color: #047af8 !important;
-  outline: 1px solid #047af8;
+  color: var(--secondary-color) !important;
+  outline: 2px solid var(--secondary-color);
 }
 
 .button:active {
-  transform: scale(0.95);
+  transform: scale(0.95);
 }

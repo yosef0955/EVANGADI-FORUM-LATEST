@@ -27,7 +27,7 @@
     transform: translateX(-50%);
     width: 60px; /* Shorter underline */
     height: 4px; /* Thinner underline */
-    background-color: var(--old-button-color);
+    background-color: var(--secondary-color);
     border-radius: 10px;
   }
   
@@ -112,7 +112,7 @@
     left: 0;
     width: 80px; /* Shorter underline */
     height: 3px; /* Thinner underline */
-    background-color: var(--old-button-color);
+    background-color: var(--secondary-color);
     border-radius: 10px;
   }
   
@@ -228,7 +228,7 @@
   }
   
   .stepIconWrapper svg {
-    color: var(--old-button-color);
+    color: var(--secondary-color);
   }
   
   .text {

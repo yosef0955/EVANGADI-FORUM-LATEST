@@ -1,216 +1,356 @@
+.background {
+  background: linear-gradient(135deg, #f0f4ff, #dfe6e9);
+  min-height: 100vh;
+  font-family: var(--primary-font);
+  padding: 0 5%;
+}
+
 /* Container */
 .container {
-    max-width: 1200px;
-    margin: 0 auto;
-    padding: 20px;
-    font-family: var(--primary-font);
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+/* Welcome User Section */
+
+.welcomeUser {
+  padding-top: 30px;
+  display: flex; /* Enables flexbox */
+  align-items: center; /* Centers items vertically */
+  justify-content: flex-end; /* Aligns content to the right */
+}
+
+.welcomeUser h5 {
+  font-size: 1.15rem;
+  margin: 0;
+  font-weight: 300;
+  text-align: right;
+  display: flex; /* Ensures elements inside align properly */
+  align-items: center; /* Centers items vertically */
+  gap: 10px; /* Adds spacing between text and icon */
+}
+
+/* Ask Question Section */
+.askQuestionContainer {
+  margin: 40px 0 20px 0;
+  display: flex;
+  gap: 5%;
+}
+
+.askQuestionButton {
+  background: linear-gradient(135deg, #ffc8aa, #fe6613);
+  border: none;
+  text-align: center;
+  text-decoration: none;
+  width: 200px;
+  padding: 12px 25px;
+  font-size: 1rem;
+  font-weight: 600;
+  color: white;
+  border-radius: 50px;
+  box-shadow: 0 4px 15px rgba(0, 206, 201, 0.3);
+  cursor: pointer;
+  transition: all 0.3s ease;
+  position: relative;
+}
+
+.askQuestionButton:hover {
+  transform: translateY(-4px) scale(1.02);
+  box-shadow: 0 8px 25px rgba(254, 102, 19, 0.4);
+  background: linear-gradient(135deg, #ffd5c2, #fe6613);
+  text-shadow: 0 2px 4px rgba(255, 255, 255, 0.3);
+}
+
+.searchInput {
+  font-family: var(--primary-font);
+  padding: 15px 20px;
+  border: 0.1px solid #c2c2c2;
+  border-radius: 50px !important;
+  font-size: 1rem;
+  width: 50%;
+}
+
+.searchInput:focus {
+  box-shadow: var(--secondary-color) 0px 0px 6px 0px;
+  border-color: none;
+  border: none;
+}
+
+.questionsHeading {
+  font-size: 2rem;
+  font-weight: 700;
+  color: #943400;
+  margin: 50px 10px;
+  position: relative;
+}
+.questionsHeading::after {
+  content: "";
+  width: 60px;
+  height: 4px;
+  background: linear-gradient(90deg, #fe6613, #ffc6a7);
+  position: absolute;
+  bottom: -10px;
+  left: 0;
+  border-radius: 2px;
+  animation: infiniteGrowth 2s infinite ease-in-out;
+}
+@keyframes infiniteGrowth {
+  0%,
+  100% {
+    width: 60px;
   }
-  
-  /* Welcome User Section */
-  
-  .welcomeUser {
-    display: flex; /* Enables flexbox */
-    align-items: center; /* Centers items vertically */
-    justify-content: flex-end; /* Aligns content to the right */
-    padding: 10px 20px; /* Adds some spacing */
-    margin-top: 20px;
+  50% {
+    width: 100px;
   }
-  
-  .welcomeUser h5 {
-    font-size: 1.15rem;
-    margin: 0;
-    font-weight: 300;
-    text-align: right;
-    display: flex; /* Ensures elements inside align properly */
-    align-items: center; /* Centers items vertically */
-    gap: 10px; /* Adds spacing between text and icon */
+}
+
+/* List Group */
+.listGroup {
+  display: flex;
+  gap: 18px;
+  flex-direction: column;
+  margin-top: 7vh;
+}
+
+/* List Item */
+.listItem {
+  display: flex;
+  align-items: center;
+  padding: 30px 20px;
+  background: white;
+  border-radius: 7px;
+  text-decoration: none;
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+  transition: all 0.3s ease;
+  position: relative;
+  overflow: hidden;
+  gap: 20px;
+  transition: transform 0.5s ease;
+}
+
+.listItem:hover {
+  transform: translateY(-7px);
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.2);
+}
+
+/* Profile Section */
+.profileSection {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin-right: 20px;
+  color: #ffd8c2;
+}
+
+.username {
+  font-size: 0.875rem;
+  color: #6c757d;
+  margin-top: 5px;
+}
+
+/* Question Text */
+.questionText {
+  font-weight: lighter;
+  border-right: 0.1px solid rgb(178, 178, 178);
+}
+
+.questionTitle {
+  text-align: start;
+  font-weight: 500;
+  color: #3a3b3c;
+  margin: 0;
+}
+
+.tags {
+  display: flex;
+  gap: 15px;
+}
+
+.tags span {
+  color: gray;
+  font-size: 10px;
+}
+.questionLasts {
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+}
+.arrowIcon {
+  color: var(--secondary-color);
+}
+.arrowIcon:hover {
+  transform: translateX(5px);
+  transition: all 0.3s ease;
+}
+/* Loading and No Questions Text */
+.loadingText,
+.noQuestionsText {
+  text-align: center;
+  font-size: 1rem;
+}
+
+.noQuestionsText {
+  color: #dc3545;
+}
+
+/* Loading and No Questions Text */
+.loadingText,
+.noQuestionsText {
+  text-align: center;
+  font-size: 1rem;
+}
+
+.noQuestionsText {
+  color: #dc3545;
+}
+
+.pagination {
+  display: flex;
+  justify-content: center;
+  margin: 20px auto;
+  width: 50%;
+}
+
+.leftPaginationButton,
+.rightPaginationButton {
+  font-family: var(--primary-font);
+  margin: 10px;
+  font-size: 1.2em;
+  padding: 15px 20px;
+  background-color: var(--secondary-color);
+  color: white;
+  border: none;
+  cursor: pointer;
+}
+
+.rightPaginationButton:hover {
+  background: none;
+  color: var(--secondary-color);
+  border: var(--secondary-color) solid 2px;
+}
+
+.leftPaginationButton:hover {
+  background: none;
+  color: var(--secondary-color);
+  border: var(--secondary-color) solid 2px;
+}
+
+.leftPaginationButton {
+  border-top-left-radius: 50px;
+  border-bottom-left-radius: 50px;
+}
+
+.rightPaginationButton {
+  border-top-right-radius: 50px;
+  border-bottom-right-radius: 50px;
+  border: 10px;
+}
+
+.leftPaginationButton:disabled {
+  background-color: #ccc;
+  cursor: not-allowed;
+}
+
+.rightPaginationButton:disabled {
+  background-color: #ccc;
+  cursor: not-allowed;
+}
+
+.leftPaginationButton:disabled:hover {
+  background: #ccc;
+  color: white;
+  border: none;
+}
+
+.rightPaginationButton:disabled:hover {
+  background: #ccc;
+  color: white;
+  border: none;
+}
+
+.questionMeta {
+  margin-top: 1.5rem;
+  display: flex;
+  gap: 1rem;
+}
+.questionMeta svg {
+  color: gray;
+  margin-right: 0.8rem;
+}
+.questionMeta p {
+  min-width: 102px;
+  color: gray;
+  font-weight: 300;
+  margin-right: 1.5rem;
+  display: flex;
+  font-size: 0.77rem;
+}
+
+.nextIcon,
+.previousIcon {
+  display: none;
+}
+@media (max-width: 768px) {
+  .container {
+    padding: 1rem 2.5rem;
+    width: 100%;
   }
-  .avatar {
-    margin-right: -5px;
+
+  .background {
+    padding: 0;
   }
-  
-  /* Ask Question Section */
-  .askQuestionContainer {
-    display: flex;
-    flex-direction: column;
-    gap: 10px;
-    margin-bottom: 20px;
-  }
-  
-  .askQuestionButton {
-    width: 170px;
-    background-color: #007bff;
-    color: white;
-    border: none;
-    padding: 15px 20px;
-    border-radius: 9px;
-    cursor: pointer;
-    font-size: 1rem;
-    text-decoration: none;
-    text-align: center;
-  }
-  
-  .askQuestionButton:hover {
-    background-color: #0056b3;
-  }
-  
-  .searchInput {
-    padding: 20px;
-    border: 1px solid #a2a2a2;
-    border-radius: 5px;
-    font-size: 1rem;
-  }
-  
-  .searchInput:focus {
-    box-shadow: 0 0 0 0.1rem rgba(0, 123, 255, 0.75);
-    border-color: none;
-    border: none;
-  }
-  
-  /* Questions Heading */
-  .questionsHeading {
-    font-weight: 600;
-    margin-top: 20px;
-    padding-bottom: 20px;
-    font-size: 1.5rem;
-    border-bottom: 2px solid #ddd;
-    margin-bottom: 0;
-  }
-  
-  /* List Group */
-  .listGroup {
-    display: flex;
-    flex-direction: column;
-  }
-  
-  /* List Item */
-  .listItem {
-    display: flex;
-    align-items: center;
-    padding: 15px;
-    padding-right: 0;
-    border-bottom: 2px solid #ddd;
-    text-decoration: none;
-    color: inherit;
-    transition: background-color 0.3s ease;
-  }
-  
-  .listItem:hover {
-    background-color: #f4f4f4;
-  }
-  
-  /* Profile Section */
-  .profileSection {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    margin-right: 20px;
-    color: rgb(153, 153, 153);
-  }
-  
-  .username {
-    font-size: 0.875rem;
-    color: #6c757d;
-    margin-top: 5px;
-  }
-  
-  /* Question Text */
-  .questionText {
-    flex-grow: 1;
-    font-weight: lighter;
-  }
-  
+
   .questionTitle {
-    text-align: start;
-    font-weight: 400;
-    margin: 0;
+    font-size: 0.9em;
   }
-  
-  /* Loading and No Questions Text */
-  .loadingText,
-  .noQuestionsText {
-    text-align: center;
-    font-size: 1rem;
-  }
-  
-  .noQuestionsText {
-    color: #dc3545;
-  }
-  
-  /* Loading and No Questions Text */
-  .loadingText,
-  .noQuestionsText {
-    text-align: center;
-    font-size: 1rem;
-  }
-  
-  .noQuestionsText {
-    color: #dc3545;
-  }
-  
-  .pagination {
-    display: flex;
-    justify-content: center;
-    margin: 20px auto;
-    width: 50%;
-  }
-  
-  .paginationButton {
-    margin: 10px;
-    padding: 10px 20px;
-    background-color: #007bff;
-    color: white;
-    border: none;
-    border-radius: 5px;
-    cursor: pointer;
-  }
-  
-  .paginationButton:disabled {
-    background-color: #ccc;
-    cursor: not-allowed;
-  }
-  .questionMeta {
-    margin-top: 1.5rem;
-    display: flex;
-    gap: 1rem;
-  }
-  .questionMeta svg {
-    color: var(--old-button-hover-color);
-    margin-right: 0.8rem;
-  }
-  .questionMeta p {
-    color: rgb(0, 0, 0);
-    font-weight: 200;
-    margin-right: 1.5rem;
-    display: flex;
+  .searchInput {
+    padding: 15px 20px;
     font-size: 0.9rem;
+    width: 100%;
   }
   .nextIcon,
   .previousIcon {
+    display: block;
+  }
+
+  .welcomeUser {
+    margin-top: 5px;
+    margin-bottom: 30px;
+  }
+
+  .askQuestionContainer {
+    margin: 50px 0 20px 0;
+    display: flex;
+    flex-direction: column;
+    gap: 0px;
+  }
+
+  .questionsHeading {
+    margin: 30px 10px;
+  }
+
+  .next,
+  .previous {
     display: none;
   }
-  @media (max-width: 768px) {
-    .container {
-      padding: 3rem 2.5rem;
-      width: 85%;
-    }
-    .nextIcon,
-    .previousIcon {
-      display: block;
-    }
-  
-    .next,
-    .previous {
-      display: none;
-    }
-    .paginationButton {
-      margin: 10px;
-      padding: 0.5rem 1rem;
-      text-align: center;
-      background-color: #007bff;
-      color: white;
-      border: none;
-      border-radius: 5px;
-      cursor: pointer;
-    }
+
+  .tag_icon {
+    display: none;
   }
+  .tags {
+    flex-direction: column;
+    gap: 15px;
+  }
+
+  .tags_container {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+  }
+  .listItem {
+    gap: 10px;
+  }
+  .questionText {
+    border-right: 0.1px solid rgb(208, 208, 208);
+  }
+}

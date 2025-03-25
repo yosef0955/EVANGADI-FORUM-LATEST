@@ -18,21 +18,21 @@ const HowItWorks = () => {
       title: "Join the Community",
       description:
         "Sign up for the Evangadi Forum using your Evangadi Networks Bootcamp credentials or create a new account. Connect with fellow bootcamp participants and alumni.",
-      icon: <FaUsers color={"#344767"} />, // Changed color to a more professional tone
+      icon: <FaUsers/>, // Changed color to a more professional tone
     },
     {
       number: 2,
       title: "Ask Questions & Share Knowledge",
       description:
         "Post your questions, share your insights, and engage in discussions related to your bootcamp projects, coding challenges, and career development.",
-      icon: <FaQuestionCircle color={"#344767"} />,
+      icon: <FaQuestionCircle />,
     },
     {
       number: 3,
       title: "Get Help & Provide Support",
       description:
         "Receive assistance from experienced mentors and peers when you face coding roadblocks. Offer your expertise to help others and build your reputation.",
-      icon: <FaHandsHelping color={"#344767"} />,
+      icon: <FaHandsHelping/>,
     },
   ];
 

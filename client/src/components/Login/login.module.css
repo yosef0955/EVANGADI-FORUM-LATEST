@@ -31,10 +31,11 @@
     background-color: #e7f0fe;
     width: 100%; /* Full width within the 80% container */
     border: 1.65px solid #dee2e6;
-    border-radius: 0;
+    border-radius: 50px;
     font-size: 15px;
     box-sizing: border-box;
   }
+
   
   .form input:focus {
     border: none;
@@ -48,19 +49,20 @@
   }
   
   .login__button {
-    font-weight: lighter;
+    font-family: var(--primary-font);
+    font-weight: 600;
     width: 100%;
-    background-color: #526cf0;
+    background-color: var(--secondary-color);
     color: white;
-    border-radius: 4px;
-    font-size: 16px;
+    border-radius: 50px;
+    font-size: 17px;
     cursor: pointer;
     transition: background-color 0.3s;
     padding: 16px;
   }
   
   .login__button:hover {
-    background-color: var(--old-button-hover-color);
+    background-color: var(--shade-color);
   }
   
   .forget {
@@ -118,16 +120,6 @@
     position: relative;
     width: 100%;
   }
-  
-  /* .form input {
-    width: 100%;
-    padding: 12px;
-    border-bottom: 2px solid #ccc;
-    outline: none;
-    font-size: 16px;
-    background: transparent;
-    transition: border-color 0.s ease-in-out;
-  } */
   
   .form input:focus {
     border-bottom: 2.5px solid var(--secondary-color); 
