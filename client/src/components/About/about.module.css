@@ -18,7 +18,11 @@
   margin: 0px 0px 10px;
   position: relative;
   padding-top: 10px;
-  background: linear-gradient(310deg, #000000, #e33f00);/*applies a gradient from left to right with two colors:*/
+  background: linear-gradient(
+    310deg,
+    #000000,
+    #e33f00
+  ); /*applies a gradient from left to right with two colors:*/
   -webkit-text-fill-color: transparent;
   -webkit-background-clip: text;
 }
@@ -33,7 +37,7 @@
   text-align: left;
 }
 .about_section .button {
-  min-width: 17vw;
+  width: 17vw;
   color: white;
   font-size: 15px;
   font-weight: 400;

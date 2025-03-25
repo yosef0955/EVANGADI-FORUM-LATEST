@@ -116,7 +116,7 @@
 .listItem {
   display: flex;
   align-items: center;
-  padding: 30px 20px;
+  padding: 40px 20px;
   background: white;
   border-radius: 7px;
   text-decoration: none;
@@ -151,6 +151,7 @@
 /* Question Text */
 .questionText {
   font-weight: lighter;
+  width: 25%;
   border-right: 0.1px solid rgb(178, 178, 178);
 }
 
@@ -352,5 +353,6 @@
   }
   .questionText {
     border-right: 0.1px solid rgb(208, 208, 208);
+    width: unset;
   }
 }
